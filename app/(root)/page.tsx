@@ -1,6 +1,5 @@
 "use client";
 
-import { Modal } from "@/components/ui/modal";
 import { useStoreModal } from "@/hooks/use-store-modal";
 import { useEffect } from "react";
 
@@ -9,7 +8,9 @@ const SetupPage = () => {
   const isOpen = useStoreModal((state) => state.isOpen);
 
   useEffect(() => {
+    // If Model is not open
     if(!isOpen) {
+      // Open it
       onOpen();
     }
   }, [isOpen, onOpen]);
