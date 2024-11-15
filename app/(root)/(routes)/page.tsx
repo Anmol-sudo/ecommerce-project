@@ -9,17 +9,13 @@ const SetupPage = () => {
 
   useEffect(() => {
     // If Model is not open
-    if(!isOpen) {
+    if (!isOpen) {
       // Open it
       onOpen();
     }
   }, [isOpen, onOpen]);
 
-  return (
-    <div className="p-4">
-      Root Page
-    </div>
-  );
+  return null;
 };
 
 export default SetupPage;
