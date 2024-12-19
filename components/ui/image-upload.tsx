@@ -7,6 +7,8 @@ import { CldUploadWidget } from "next-cloudinary";
 
 import { Button } from "@/components/ui/button";
 
+
+
 interface ImageUploadProps {
   disabled?: boolean;
   onChange: (value: string) => void;
@@ -20,6 +22,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   onRemove,
   value,
 }) => {
+  
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -33,6 +36,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
   if (!isMounted) {
     return null;
   }
+  
 
   return (
     <div>
